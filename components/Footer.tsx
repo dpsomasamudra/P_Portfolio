@@ -4,10 +4,10 @@ import { PERSONAL_DETAILS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-6 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <footer className="py-12 px-6 border-t border-slate-200 bg-white">
       <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 text-sm text-slate-500">
         <div className="flex items-center space-x-2">
-          <span className="font-bold text-slate-900 dark:text-slate-100">{PERSONAL_DETAILS.brand}</span>
+          <span className="font-bold text-slate-900">{PERSONAL_DETAILS.brand}</span>
           <span>&copy; {new Date().getFullYear()}</span>
         </div>
 

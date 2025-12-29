@@ -43,31 +43,31 @@ export const EXPERIENCE: Experience[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: "finsmart",
-    title: "FinSmart Stock Analysis",
-    problem: "Stock market trends are difficult to predict without leveraging advanced analytical models and historical data.",
-    solution: "Implemented ML models (Linear Regression, Random Forest, LSTM) using technical indicators and historical stock data to predict market trends.",
-    techStack: ["Python", "ML", "LSTM", "Data Science"],
+    id: "ai-financial-dashboard",
+    title: "AI-Powered Financial Analysis and Predictor Dashboard",
+    problem: "Stock market trends and risk metrics are difficult to analyze without comprehensive, real-time data integration and predictive modeling.",
+    solution: "Developed a Flask web application that analyzes and predicts stock prices for input ticker symbols. Integrated real-time stock analysis with Yahoo Finance API, sentiment analysis via NewsAPI, stock trend indicators (SMA, RSI, MACD), and risk metrics (Sharpe ratio, beta, VaR). Created interactive candlestick charts with buy/sell signals using Plotly and 5-day price predictions via Linear Regression ML model.",
+    techStack: ["Flask", "Python", "ML", "Yahoo Finance API", "NewsAPI", "Plotly"],
     githubUrl: "https://github.com/dpsomasamudra",
     images: ["https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&q=80&w=800"]
   },
   {
-    id: "honeypot",
-    title: "Honeypot Security System",
-    problem: "Unauthorized access attempts often go undetected without specialized deception-based security tools.",
-    solution: "Built a Python-based honeypot to detect and log unauthorized access attempts. Captured attacker details (IP, ports, payloads) for analysis and reporting, improving security visibility.",
-    techStack: ["Python", "Networking", "Security Logs"],
+    id: "patient-management-microservices",
+    title: "Patient Management System – Microservices Architecture",
+    problem: "Traditional monolithic patient management systems lack scalability and flexibility for modern healthcare needs.",
+    solution: "Built production-ready patient management platform using Java Spring Boot microservices architecture deployed on AWS. Implemented scalable backend services with RESTful APIs, JWT authentication, and role-based access control via secure token processing. Integrated MySQL database with optimized queries and deployed containerized services on AWS for high availability and performance. Designed service-to-service communication patterns and implemented comprehensive error handling and logging mechanisms.",
+    techStack: ["Java", "Spring Boot", "AWS", "MySQL", "JWT", "Microservices"],
     githubUrl: "https://github.com/dpsomasamudra",
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"]
+    images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"]
   },
   {
-    id: "emergency-doctor",
-    title: "Emergency Doctor Contact System",
-    problem: "Immediate access to medical professionals during emergencies is often hampered by slow communication channels.",
-    solution: "Engineered a rapid-response system to connect patients with available specialized doctors based on proximity and urgency.",
-    techStack: ["React", "Firebase", "Geolocation"],
+    id: "honeypot-security",
+    title: "Honeypot Security System",
+    problem: "Unauthorized access attempts often go undetected without specialized deception-based security monitoring tools.",
+    solution: "Built Python-based honeypot to detect and log unauthorized access attempts for security monitoring. Captured attacker behavior including IP addresses, timestamps, and payload data for security analysis and incident response. Improved security visibility by identifying suspicious activity patterns and potential attack vectors.",
+    techStack: ["Python", "Networking", "Security", "Logging"],
     githubUrl: "https://github.com/dpsomasamudra",
-    images: ["https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800"]
+    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"]
   }
 ];
 
@@ -97,9 +97,9 @@ export const EDUCATION_DATA: Education[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-  { name: "Front End Web Developer Certification", issuer: "Infosys Springboard", year: "2025" },
-  { name: "Google Cybersecurity Professional Certificate (8 Courses)", issuer: "Google/Coursera", year: "2025" },
-  { name: "Mastering Authentication Vulnerabilities - Ultimate Course", issuer: "Udemy", year: "2025" },
-  { name: "Financial Markets", issuer: "Yale University/Coursera", year: "2024" },
-  { name: "SEBI - Investor Certification Examination", issuer: "NISM", year: "2024" }
+  { name: "Meta Front-End Developer", issuer: "Meta", year: "2024" },
+  { name: "Meta Back-End Developer", issuer: "Meta", year: "2024" },
+  { name: "Microsoft Azure Fundamentals", issuer: "Microsoft", year: "2024" },
+  { name: "Meta Database Engineer", issuer: "Meta", year: "2024" },
+  { name: "Google Cybersecurity", issuer: "Google", year: "2025" }
 ];

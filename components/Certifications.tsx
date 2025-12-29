@@ -73,14 +73,14 @@ const Certifications: React.FC = () => {
     };
 
     return (
-        <section id="certifications" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-indigo-50/30 to-purple-50/30 dark:from-slate-900 dark:via-indigo-950/30 dark:to-purple-950/30 scroll-mt-24">
+        <section id="certifications" className="py-24 px-6 scroll-mt-24">
             <div className="max-w-[1600px] mx-auto">
                 {/* Header */}
                 <div className="text-center space-y-4 mb-16">
                     <h2 className="text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                         Certifications
                     </h2>
-                    <p className="text-slate-600 dark:text-slate-400 text-xl">Professional certifications and completed courses</p>
+                    <p className="text-slate-600 text-xl">Professional certifications and completed courses</p>
                 </div>
 
                 {/* Certifications Grid */}

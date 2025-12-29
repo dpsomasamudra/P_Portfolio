@@ -60,11 +60,11 @@ const SkillIcon = ({ name }: { name: string }) => {
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="py-24 px-6 scroll-mt-24 bg-slate-50 dark:bg-slate-900/40">
+    <section id="skills" className="py-24 px-6 scroll-mt-24">
       <div className="max-w-[1600px] mx-auto space-y-16">
         <div className="text-center space-y-3">
-          <h2 className="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Technical Skills</h2>
-          <p className="text-slate-500 dark:text-slate-400 text-xl">Technologies I work with to build modern applications</p>
+          <h2 className="text-5xl font-extrabold tracking-tight text-slate-900">Technical Skills</h2>
+          <p className="text-slate-500 text-xl">Technologies I work with to build modern applications</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -78,7 +78,7 @@ const Skills: React.FC = () => {
               <h3 className="mt-5 text-lg font-bold text-slate-900 dark:text-slate-100">{skill.name}</h3>
 
               <div className={`mt-3 text-[12px] font-bold px-5 py-1.5 rounded-full tracking-wide ${skill.level === 'Advanced' ? 'bg-green-100 text-green-600 dark:bg-green-900/20 dark:text-green-400' :
-                  'bg-blue-100 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400'
+                'bg-blue-100 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400'
                 }`}>
                 {skill.level}
               </div>

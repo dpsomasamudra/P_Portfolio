@@ -3,12 +3,33 @@ import React, { useState } from 'react';
 import { PERSONAL_DETAILS } from '../constants';
 
 const Contact: React.FC = () => {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
-    setTimeout(() => setStatus('success'), 1500);
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    // Open email client
+    window.location.href = `mailto:${PERSONAL_DETAILS.email}?subject=${subject}&body=${body}`;
+
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
@@ -64,38 +85,50 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="bg-white/5 p-8 rounded-3xl border border-white/10 relative overflow-hidden">
-          {status === 'success' ? (
-            <div className="h-full flex flex-col items-center justify-center space-y-4 py-12 animate-in fade-in zoom-in">
-              <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-              </div>
-              <h3 className="text-2xl font-bold">Message Sent!</h3>
-              <p className="text-slate-400">I'll get back to you within 24 hours.</p>
-              <button onClick={() => setStatus('idle')} className="text-indigo-400 underline font-medium pt-4">Send another message</button>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-slate-400">Full Name</label>
+              <input
+                required
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
+                placeholder="Enter your name"
+              />
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-400">Full Name</label>
-                <input required type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="Enter your name" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-400">Email Address</label>
-                <input required type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all" placeholder="your@email.com" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-slate-400">Message</label>
-                <textarea required rows={4} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none" placeholder="How can I help you?"></textarea>
-              </div>
-              <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-indigo-600/20"
-              >
-                {status === 'sending' ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
-          )}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-slate-400">Email Address</label>
+              <input
+                required
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-slate-400">Message</label>
+              <textarea
+                required
+                rows={4}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-indigo-500 outline-none transition-all resize-none"
+                placeholder="How can I help you?"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-indigo-600/20"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>

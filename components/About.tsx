@@ -3,7 +3,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 px-6 bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-950 scroll-mt-24">
+    <section id="about" className="py-24 px-6 scroll-mt-24">
       <div className="max-w-[1600px] mx-auto">
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -26,13 +26,13 @@ const About: React.FC = () => {
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-lg">
+                    <div className="bg-white rounded-2xl p-4 shadow-lg">
                       <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">3+</div>
-                      <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold">Projects</div>
+                      <div className="text-xs text-slate-600 font-semibold">Projects</div>
                     </div>
-                    <div className="bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-lg">
+                    <div className="bg-white rounded-2xl p-4 shadow-lg">
                       <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">5+</div>
-                      <div className="text-xs text-slate-600 dark:text-slate-400 font-semibold">Certifications</div>
+                      <div className="text-xs text-slate-600 font-semibold">Certifications</div>
                     </div>
                   </div>
                 </div>
@@ -48,23 +48,23 @@ const About: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                About Me
+                Career Summary
               </h2>
               <div className="h-1.5 w-24 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
             </div>
 
-            <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
-              I am a results-driven software engineer and cybersecurity professional passionate about building secure, high-performance solutions. I am committed to leveraging emerging technologies and best practices to drive innovation and protect systems.
+            <p className="text-slate-700 text-lg leading-relaxed">
+              Results-driven software engineer passionate about building scalable, high-performance solutions. Committed to leveraging emerging technologies and best practices to drive innovation and deliver impactful results.
             </p>
 
             {/* Quote box with gradient border */}
             <div className="relative p-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-500">
-              <div className="bg-white dark:bg-slate-900 rounded-2xl p-6">
+              <div className="bg-white rounded-2xl p-6">
                 <div className="flex items-start space-x-3">
                   <svg className="w-8 h-8 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-base font-medium text-slate-700 dark:text-slate-300 italic">
+                  <p className="text-base font-medium text-slate-700 italic">
                     Focused on delivering impactful results through secure coding and analytical problem-solving.
                   </p>
                 </div>
@@ -84,7 +84,7 @@ const About: React.FC = () => {
                     {item.icon}
                   </div>
                   <div className="flex-1 pt-2">
-                    <span className="text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+                    <span className="text-slate-800 font-medium leading-relaxed">
                       {item.text}
                     </span>
                   </div>

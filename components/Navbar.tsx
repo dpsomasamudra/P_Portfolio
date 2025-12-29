@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 import { PERSONAL_DETAILS } from '../constants';
 
 const Navbar: React.FC = () => {
@@ -28,7 +27,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 px-4 md:px-6 py-4 flex justify-center">
-      <div className="max-w-[1600px] w-full flex flex-col md:flex-row items-center justify-between glass dark:bg-slate-900/95 rounded-3xl md:rounded-full px-6 py-2 shadow-xl border border-white/10 backdrop-blur-md">
+      <div className="max-w-[1600px] w-full flex flex-col md:flex-row items-center justify-between glass rounded-3xl md:rounded-full px-6 py-2 shadow-xl border border-white/10 backdrop-blur-md bg-white/95">
         <div className="w-full md:w-auto flex items-center justify-between py-1 md:py-0">
           <a
             href="#top"
@@ -41,10 +40,9 @@ const Navbar: React.FC = () => {
           </a>
 
           <div className="flex md:hidden items-center space-x-4">
-            <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="p-2 text-slate-600 dark:text-slate-300"
+              className="p-2 text-slate-600"
               aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {isMenuOpen ? (
@@ -63,7 +61,7 @@ const Navbar: React.FC = () => {
           <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-indigo-500 transition-colors py-1">Projects</a>
           <a href="#certifications" onClick={(e) => handleNavClick(e, 'certifications')} className="hover:text-indigo-500 transition-colors py-1">Certifications</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="hover:text-indigo-500 transition-colors py-1">Contact</a>
-          <div className="md:hidden w-full h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
+          <div className="md:hidden w-full h-px bg-slate-200 my-2"></div>
           <a
             href={PERSONAL_DETAILS.resumeUrl}
             target="_blank"
@@ -75,7 +73,6 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <ThemeToggle />
           <a
             href={PERSONAL_DETAILS.resumeUrl}
             target="_blank"

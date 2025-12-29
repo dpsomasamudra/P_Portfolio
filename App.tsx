@@ -9,12 +9,11 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ChatAssistant from './components/ChatAssistant';
 import Certifications from './components/Certifications';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#EDE9FE]">
       <Navbar />
       <main>
         <Hero />
@@ -27,7 +26,6 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Footer />
-      <ChatAssistant />
     </div>
   );
 };
