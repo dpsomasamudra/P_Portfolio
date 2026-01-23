@@ -11,7 +11,7 @@ export const PERSONAL_DETAILS = {
   phone: "+91 6366726829",
   github: "https://github.com/dpsomasamudra",
   linkedin: "https://linkedin.com/in/prashantha-d6366",
-  resumeUrl: "/Prashantha_D_Resume.pdf"
+  resumeUrl: "/PrashanthaD_resume.pdf"
 };
 
 export const SKILLS: Skill[] = [
